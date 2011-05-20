@@ -82,21 +82,9 @@ System = {
 
 	supports: {
 
-		canvas: !! window.CanvasRenderingContext2D,
+		canvasContext: !! window.CanvasRenderingContext2D,
 
-		webgl: ( function () {
-
-			try {
-
-				return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' );
-
-			} catch( error ) {
-
-				return false;
-
-			}
-
-		} )(),
+		webglContext: !! window.WebGLRenderingContext,
 
 		webWorkers: !! window.Worker,
 
@@ -104,7 +92,7 @@ System = {
 
 			try {
 
-				return !!localStorage.getItem;
+				return !! localStorage.getItem;
 
 			} catch( error ) {
 
@@ -118,7 +106,7 @@ System = {
 
 			try {
 
-				return !!sessionStorate.getItem;
+				return !! sessionStorate.getItem;
 
 			} catch( error ) {
 
