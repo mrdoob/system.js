@@ -96,7 +96,21 @@ System = {
 
 		worker: !! window.Worker,
 
-		file: window.File && window.FileReader && window.FileList && window.Blob
+		file: window.File && window.FileReader && window.FileList && window.Blob,
+
+		localStorage: ( function() {
+
+			try {
+
+				return !!localStorage.getItem;
+
+			} catch( error ) {
+
+				return false;
+
+			}
+
+		} )()
 
 	}
 
