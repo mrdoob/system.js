@@ -6,7 +6,11 @@ System = {
 
 	browser: ( function () {
 
-		if ( navigator.userAgent.match( /chrome/i ) ) {
+		if ( navigator.userAgent.match( /arora/i ) ) {
+
+			 return 'Arora';
+
+		} else if ( navigator.userAgent.match( /chrome/i ) ) {
 
 			 return 'Chrome';
 
@@ -81,6 +85,7 @@ System = {
 			try {
 
 				return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' );
+
 			} catch( error ) {
 
 				return false;
