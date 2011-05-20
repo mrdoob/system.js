@@ -6,39 +6,41 @@ System = {
 
 	browser: ( function () {
 
-		if ( navigator.userAgent.match( /arora/i ) ) {
+		var ua = navigator.userAgent;
+
+		if ( /Arora/.test( ua ) ) {
 
 			 return 'Arora';
 
-		} else if ( navigator.userAgent.match( /chrome/i ) ) {
+		} else if ( /Chrome/.test( ua ) ) {
 
 			 return 'Chrome';
 
-		} else if ( navigator.userAgent.match( /epiphany/i ) ) {
+		} else if ( /Epiphany/.test( ua ) ) {
 
 			return 'Epiphany';
 
-		} else if ( navigator.userAgent.match( /firefox/i ) ) {
+		} else if ( /Firefox/.test( ua ) ) {
 
 			return 'Firefox';
 
-		} else if ( navigator.userAgent.match( /mobile safari/i ) ) {
+		} else if ( /Mobile Safari/.test( ua ) ) {
 
 			return 'Mobile Safari';
 
-		} else if ( navigator.userAgent.match( /midori/i ) ) {
+		} else if ( /Midori/.test( ua ) ) {
 
 			return 'Midori';
 
-		} else if ( navigator.userAgent.match( /opera/i ) ) {
+		} else if ( /Opera/.test( ua ) ) {
 
 			return 'Opera';
 
-		} else if ( navigator.userAgent.match( /safari/i ) ) {
+		} else if ( /Safari/.test( ua ) ) {
 
 			return 'Safari';
 
-		} else if ( navigator.userAgent.match( /msie/i ) ) {
+		} else if ( /MSIE/.test( ua ) ) {
 
 			return 'Internet Explorer';
 
@@ -50,23 +52,25 @@ System = {
 
 	os: ( function () {
 
-		if ( navigator.userAgent.match( /android/i ) ) {
+		var ua = navigator.userAgent;
+
+		if ( /Android/.test( ua ) ) {
 
 			 return 'Android';
 
-		} else if ( navigator.userAgent.match( /ipod/i ) || navigator.userAgent.match( /ipad/i ) ) {
+		} else if ( /iP[ao]d|iPhone/i.test( ua ) ) {
 
 			return 'iOS';
 
-		} else if ( navigator.userAgent.match( /linux/i ) ) {
+		} else if ( /Linux/.test( ua ) ) {
 
 			return 'Linux';
 
-		} else if ( navigator.userAgent.match( /macintosh/i ) ) {
+		} else if ( /Mac OS/.test( ua ) ) {
 
-			return 'Macintosh';
+			return 'Mac OS';
 
-		} else if ( navigator.userAgent.match( /windows/i ) ) {
+		} else if ( /windows/.test( ua ) ) {
 
 			return 'Windows';
 
@@ -94,9 +98,7 @@ System = {
 
 		} )(),
 
-		worker: !! window.Worker,
-
-		file: window.File && window.FileReader && window.FileList && window.Blob,
+		webWorkers: !! window.Worker,
 
 		localStorage: ( function() {
 
@@ -110,7 +112,23 @@ System = {
 
 			}
 
-		} )()
+		} )(),
+
+		sessionStorage: ( function() {
+
+			try {
+
+				return !!sessionStorate.getItem;
+
+			} catch( error ) {
+
+				return false;
+
+			}
+
+		} )(),
+
+		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob
 
 	}
 
