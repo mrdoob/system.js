@@ -28,6 +28,10 @@ System = {
 
 			return 'Mobile Safari';
 
+		} else if ( /MSIE/.test( ua ) ) {
+
+			return 'Internet Explorer';
+
 		} else if ( /Midori/.test( ua ) ) {
 
 			return 'Midori';
@@ -39,10 +43,6 @@ System = {
 		} else if ( /Safari/.test( ua ) ) {
 
 			return 'Safari';
-
-		} else if ( /MSIE/.test( ua ) ) {
-
-			return 'Internet Explorer';
 
 		}
 
@@ -80,23 +80,17 @@ System = {
 
 	} )(),
 
-	supports: {
+	support: {
 
-		canvasContext: !! window.CanvasRenderingContext2D,
+		canvas: !! window.CanvasRenderingContext2D,
 
-		webglContext: !! window.WebGLRenderingContext,
-
-		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
-
-		webWorkers: !! window.Worker,
-
-		localStorage: ( function() {
+		localStorage: ( function () {
 
 			try {
 
 				return !! localStorage.getItem;
 
-			} catch( error ) {
+			} catch ( error ) {
 
 				return false;
 
@@ -104,13 +98,19 @@ System = {
 
 		} )(),
 
-		sessionStorage: ( function() {
+		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob,
+
+		fileSystem: !! window.requestFileSystem,
+
+		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
+
+		sessionStorage: ( function () {
 
 			try {
 
 				return !! sessionStorate.getItem;
 
-			} catch( error ) {
+			} catch ( error ) {
 
 				return false;
 
@@ -118,7 +118,9 @@ System = {
 
 		} )(),
 
-		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob
+		webgl: !! window.WebGLRenderingContext,
+
+		worker: !! window.Worker
 
 	}
 
