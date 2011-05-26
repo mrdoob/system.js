@@ -86,6 +86,8 @@ System = {
 
 		webglContext: !! window.WebGLRenderingContext,
 
+		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
+
 		webWorkers: !! window.Worker,
 
 		localStorage: ( function() {
