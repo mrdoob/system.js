@@ -58,6 +58,10 @@ System = {
 
 			 return 'Android';
 
+		} else if ( /CrOS/.test( ua ) ) {
+
+			 return 'Chrome OS';
+
 		} else if ( /iP[ao]d|iPhone/i.test( ua ) ) {
 
 			return 'iOS';
