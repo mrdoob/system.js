@@ -1,7 +1,7 @@
 system.js
 ========
 
-#### Javacript object with the user's system capabilities information ####
+#### Javacript object with the user's system information ####
 
 ### Usage ###
 
