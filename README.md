@@ -5,13 +5,15 @@ system.js
 
 ### Usage ###
 
-	<script src="js/System.js"></script>
-	<script>
+```html
+<script src="System.js"></script>
+<script>
 
-		if ( System.support.webgl ) {
+	if ( System.support.webgl ) {
 
-			alert( 'FTW!' );
+		alert( 'FTW!' );
 
-		}
+	}
 
-	</script>
+</script>
+```
