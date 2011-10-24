@@ -112,7 +112,7 @@ System = {
 
 			try {
 
-				return !! sessionStorate.getItem;
+				return !! sessionStorage.getItem;
 
 			} catch ( error ) {
 
