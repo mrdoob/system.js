@@ -8,31 +8,31 @@ System = {
 
 		var ua = navigator.userAgent;
 
-		if ( /Arora/.test( ua ) ) {
+		if ( /Arora/i.test( ua ) ) {
 
 			 return 'Arora';
 
-		} else if ( /Chrome/.test( ua ) ) {
+		} else if ( /Chrome/i.test( ua ) ) {
 
 			 return 'Chrome';
 
-		} else if ( /Epiphany/.test( ua ) ) {
+		} else if ( /Epiphany/i.test( ua ) ) {
 
 			return 'Epiphany';
 
-		} else if ( /Firefox/.test( ua ) ) {
+		} else if ( /Firefox/i.test( ua ) ) {
 
 			return 'Firefox';
 
-		} else if ( /Mobile Safari/.test( ua ) ) {
+		} else if ( /Mobile(\/.*)? Safari/i.test( ua ) ) {
 
 			return 'Mobile Safari';
 
-		} else if ( /MSIE/.test( ua ) ) {
+		} else if ( /MSIE/i.test( ua ) ) {
 
 			return 'Internet Explorer';
 
-		} else if ( /Midori/.test( ua ) ) {
+		} else if ( /Midori/i.test( ua ) ) {
 
 			return 'Midori';
 
@@ -40,7 +40,7 @@ System = {
 
 			return 'Opera';
 
-		} else if ( /Safari/.test( ua ) ) {
+		} else if ( /Safari/i.test( ua ) ) {
 
 			return 'Safari';
 
@@ -54,11 +54,11 @@ System = {
 
 		var ua = navigator.userAgent;
 
-		if ( /Android/.test( ua ) ) {
+		if ( /Android/i.test( ua ) ) {
 
 			 return 'Android';
 
-		} else if ( /CrOS/.test( ua ) ) {
+		} else if ( /CrOS/i.test( ua ) ) {
 
 			 return 'Chrome OS';
 
@@ -66,15 +66,15 @@ System = {
 
 			return 'iOS';
 
-		} else if ( /Linux/.test( ua ) ) {
+		} else if ( /Linux/i.test( ua ) ) {
 
 			return 'Linux';
 
-		} else if ( /Mac OS/.test( ua ) ) {
+		} else if ( /Mac OS/i.test( ua ) ) {
 
 			return 'Mac OS';
 
-		} else if ( /windows/.test( ua ) ) {
+		} else if ( /windows/i.test( ua ) ) {
 
 			return 'Windows';
 
@@ -129,3 +129,4 @@ System = {
 	}
 
 };
+
