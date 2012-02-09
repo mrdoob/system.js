@@ -92,7 +92,7 @@ var System = {
 
 			try {
 
-				return !! localStorage.getItem;
+				return !! window.localStorage.getItem;
 
 			} catch ( error ) {
 
@@ -112,7 +112,7 @@ var System = {
 
 			try {
 
-				return !! sessionStorage.getItem;
+				return !! window.sessionStorage.getItem;
 
 			} catch ( error ) {
 
