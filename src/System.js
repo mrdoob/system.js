@@ -2,7 +2,7 @@
  * @author mr.doob / http://mrdoob.com/
  */
 
-System = {
+var System = {
 
 	browser: ( function () {
 
@@ -129,4 +129,3 @@ System = {
 	}
 
 };
-
