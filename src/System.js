@@ -104,7 +104,7 @@ var System = {
 
 		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob,
 
-		fileSystem: !! window.requestFileSystem,
+		fileSystem: !! window.requestFileSystem || !! window.webkitRequestFileSystem,
 
 		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
 
