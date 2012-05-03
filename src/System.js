@@ -105,6 +105,8 @@ var System = {
 		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob,
 
 		fileSystem: !! window.requestFileSystem || !! window.webkitRequestFileSystem,
+		
+		getUserMedia: !! window.navigator.getUserMedia || !! window.navigator.webkitGetUserMedia || !! window.navigator.mozGetUserMedia || !! window.navigator.msGetUserMedia,
 
 		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
 
