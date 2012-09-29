@@ -6,7 +6,7 @@ system.js
 ### Usage ###
 
 ```html
-<script src="System.js"></script>
+<script src="system.min.js"></script>
 <script>
 
 	if ( System.support.webgl ) {
