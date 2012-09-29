@@ -105,7 +105,7 @@ var System = {
 		file: !! window.File && !! window.FileReader && !! window.FileList && !! window.Blob,
 
 		fileSystem: !! window.requestFileSystem || !! window.webkitRequestFileSystem,
-		
+
 		getUserMedia: !! window.navigator.getUserMedia || !! window.navigator.webkitGetUserMedia || !! window.navigator.mozGetUserMedia || !! window.navigator.msGetUserMedia,
 
 		requestAnimationFrame: !! window.mozRequestAnimationFrame || !! window.webkitRequestAnimationFrame || !! window.oRequestAnimationFrame || !! window.msRequestAnimationFrame,
@@ -124,7 +124,7 @@ var System = {
 
 		} )(),
 
-		webgl: !! window.WebGLRenderingContext,
+		webgl: ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
 
 		worker: !! window.Worker
 
