@@ -11,6 +11,9 @@ var System = {
 		if ( /Arora/i.test( ua ) ) {
 
 			 return 'Arora';
+		} else if ( /Opera|OPR/.test( ua ) ) {
+
+			return 'Opera';
 
 		} else if ( /Chrome/i.test( ua ) ) {
 
@@ -35,10 +38,6 @@ var System = {
 		} else if ( /Midori/i.test( ua ) ) {
 
 			return 'Midori';
-
-		} else if ( /Opera/.test( ua ) ) {
-
-			return 'Opera';
 
 		} else if ( /Safari/i.test( ua ) ) {
 
