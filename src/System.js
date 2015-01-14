@@ -11,6 +11,7 @@ var System = {
 		if ( /Arora/i.test( ua ) ) {
 
 			 return 'Arora';
+
 		} else if ( /Opera|OPR/.test( ua ) ) {
 
 			return 'Opera';
