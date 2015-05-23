@@ -16,6 +16,10 @@ var System = {
 
 			return 'Opera';
 
+		} else if ( /Maxthon/i.test( ua ) ) {
+
+			return 'Maxthon';
+
 		} else if ( /Chrome/i.test( ua ) ) {
 
 			 return 'Chrome';
