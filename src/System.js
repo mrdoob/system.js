@@ -127,6 +127,8 @@ var System = {
 			}
 
 		} )(),
+		
+		svg: ( function () { try { return !! document.createElementNS && !! document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect; } catch( e ) { return false; } } )(),
 
 		webgl: ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
 
