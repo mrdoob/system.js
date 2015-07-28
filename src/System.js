@@ -20,6 +20,14 @@ var System = {
 
 			return 'Maxthon';
 
+		} else if ( /Vivaldi/i.test( ua ) ) {
+
+			return 'Vivaldi';
+
+		} else if ( /YaBrowser/i.test( ua ) ) {
+
+			return 'Yandex';
+
 		} else if ( /Chrome/i.test( ua ) ) {
 
 			 return 'Chrome';
@@ -60,11 +68,11 @@ var System = {
 
 		if ( /Android/i.test( ua ) ) {
 
-			 return 'Android';
+			return 'Android';
 
 		} else if ( /CrOS/i.test( ua ) ) {
 
-			 return 'Chrome OS';
+			return 'Chrome OS';
 
 		} else if ( /iP[ao]d|iPhone/i.test( ua ) ) {
 
