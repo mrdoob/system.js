@@ -140,7 +140,9 @@ var System = {
 
 		webgl: ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
 
-		worker: !! window.Worker
+		worker: !! window.Worker,
+		
+		notifications: !! window.Notification && 'Notification' in Window
 
 	}
 
