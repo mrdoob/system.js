@@ -142,7 +142,7 @@ var System = {
 
 		worker: !! window.Worker,
 		
-		notifications: !! window.Notification && 'Notification' in Window
+		notifications: !! 'Notification' in Window
 
 	}
 
